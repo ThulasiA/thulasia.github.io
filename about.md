@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-My notes on my learning of React, ES6 and more!
+Notes on my learning of React, ES6 and more!
