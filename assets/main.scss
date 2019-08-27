@@ -3,6 +3,19 @@
 
 @import "minima";
 
+html,
+html[data-theme="light"] {
+  --light-text-color: #595959;
+  --main-background-color: #f3f2f2;
+  --main-text-color: #333333;
+}
+
+html[data-theme="dark"] {
+  --light-text-color: #999999;
+  --main-background-color: #1a1a1a;
+  --main-text-color: #d1c7c7;
+}
+
 .site-header {
   border-top: none;
 }
@@ -14,4 +27,10 @@ button {
   margin: 0 1em;
   outline: none;
   padding: 0.5em;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    content: "dark";
+  }
 }
