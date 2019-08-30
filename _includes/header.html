@@ -17,7 +17,7 @@
           </label>
   
           <div class="trigger">
-            <button id="toggle-theme" onclick=switchMode()></button>
+            <button id="toggle-theme" onclick="switchMode()"></button>
             {%- for path in page_paths -%}
               {%- assign my_page = site.pages | where: "path", path | first -%}
               {%- if my_page.title -%}
