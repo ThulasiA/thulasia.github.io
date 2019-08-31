@@ -1,9 +1,14 @@
 <head>
   <script>
     const theme = localStorage.getItem("theme");
-    if (theme === "dark") {
-      document.documentElement.setAttribute("data-theme", "dark");
-    }
+    console.log(theme);
+
+    window.onload = function() {
+      if (theme === "dark") {
+        document.body.setAttribute("data-theme", "dark");
+        console.log(document.body);
+      }
+    };
   </script>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />

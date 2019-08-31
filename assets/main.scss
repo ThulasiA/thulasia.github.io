@@ -3,24 +3,24 @@
 
 @import "minima";
 
-html,
-html[data-theme="light"] {
+body,
+body[data-theme="light"] {
   --main-background-color: hsl(0, 5%, 95%);
   --main-text-color: hsl(0, 0%, 0%);
 }
 
-html[data-theme="dark"] {
+body[data-theme="dark"] {
   --main-background-color: hsl(0, 0%, 10%);
   --main-text-color: hsl(0, 10%, 80%);
 }
 
-html,
-html[data-theme="light"] {
+body,
+body[data-theme="light"] {
   background: var(--main-background-color);
   color: var(--main-text-color);
 }
 
-html[data-theme="dark"] {
+body[data-theme="dark"] {
   background: var(--main-background-color);
   color: var(--main-text-color);
 }
@@ -39,7 +39,7 @@ button {
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
+  body {
     content: "dark";
   }
 }
