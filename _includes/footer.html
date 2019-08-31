@@ -33,32 +33,32 @@
   </div>
 </footer>
 <script>
-  const userPrefers = getComputedStyle(document.body).getPropertyValue('content');
+  const userPrefers = getComputedStyle(document.documentElement).getPropertyValue('content');
   //Set matching button text  and store user preferred mode in localstorage 
   if (theme === "dark") {
      document.getElementById("toggle-theme").innerHTML = "Light Mode";
   } else if (theme === "light") {
     document.getElementById("toggle-theme").innerHTML = "Dark Mode";
   } else if  (userPrefers === "dark") {
-    document.body.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
+    window.localStorage.setItem('theme', 'dark');
     document.getElementById("toggle-theme").innerHTML = "Light Mode";
   } else {
-    document.body.setAttribute('data-theme', 'light');
-    localStorage.setItem('theme', 'light');
+    document.documentElement.setAttribute('data-theme', 'light');
+    window.localStorage.setItem('theme', 'light');
     document.getElementById("toggle-theme").innerHTML = "Dark Mode";
   }
   // function when button is pressed
- function switchMode() {
- let currentMode = document.body.getAttribute('data-theme');
- if (currentMode === "dark") {
-   document.body.setAttribute('data-theme', 'light');
-   localStorage.setItem('theme', 'light');
-   document.getElementById("toggle-theme").innerHTML = "Dark Mode";
- } else {
-   document.body.setAttribute('data-theme', 'dark');
-   localStorage.setItem('theme', 'dark');
-   document.getElementById("toggle-theme").innerHTML = "Light Mode";
- }
+  function switchMode() {
+  let currentMode = document.documentElement.getAttribute('data-theme');
+  if (currentMode === "dark") {
+    document.documentElement.setAttribute('data-theme', 'light');
+    window.localStorage.setItem('theme', 'light');
+    document.getElementById("toggle-theme").innerHTML = "Dark Mode";
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    window.localStorage.setItem('theme', 'dark');
+    document.getElementById("toggle-theme").innerHTML = "Light Mode";
+  }
  }
 </script>
