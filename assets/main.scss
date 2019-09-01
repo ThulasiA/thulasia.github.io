@@ -23,13 +23,18 @@ body {
   border-top: none;
 }
 
+.site-title,
+.site-title:visited,
+.site-nav .page-link {
+  color: var(--main-text-color);
+}
+
 button {
-  background: #f6f6f6;
+  background: none;
   border: none;
-  border-radius: 3px;
+  font-size: 1.2em;
   margin: 0 1em;
   outline: none;
-  padding: 0.5em;
 }
 
 @media (prefers-color-scheme: dark) {
