@@ -36,17 +36,21 @@
   const userPrefers = getComputedStyle(document.documentElement).getPropertyValue('content');
   //Set matching button text  and store user preferred mode in localstorage 
   if (theme === "dark") {
+     document.getElementById("toggle-theme").classList.remove("moon");
      document.getElementById("toggle-theme").innerHTML = "☀️";
   } else if (theme === "light") {
-    document.getElementById("toggle-theme").innerHTML = "🌙";
+    document.getElementById("toggle-theme").classList.add("moon");
+    document.getElementById("toggle-theme").innerHTML = "";
   } else if  (userPrefers === "dark") {
     document.documentElement.setAttribute('data-theme', 'dark');
     window.localStorage.setItem('theme', 'dark');
+    document.getElementById("toggle-theme").classList.remove("moon");
     document.getElementById("toggle-theme").innerHTML = "☀️";
   } else {
     document.documentElement.setAttribute('data-theme', 'light');
     window.localStorage.setItem('theme', 'light');
-    document.getElementById("toggle-theme").innerHTML = "🌙";
+    document.getElementById("toggle-theme").classList.add("moon");
+    document.getElementById("toggle-theme").innerHTML = "";
   }
   // function when button is pressed
   function switchMode() {
@@ -54,10 +58,12 @@
   if (currentMode === "dark") {
     document.documentElement.setAttribute('data-theme', 'light');
     window.localStorage.setItem('theme', 'light');
-    document.getElementById("toggle-theme").innerHTML = "🌙";
+    document.getElementById("toggle-theme").classList.add("moon");
+    document.getElementById("toggle-theme").innerHTML = "";
   } else {
     document.documentElement.setAttribute('data-theme', 'dark');
     window.localStorage.setItem('theme', 'dark');
+    document.getElementById("toggle-theme").classList.remove("moon");
     document.getElementById("toggle-theme").innerHTML = "☀️";
   }
  }

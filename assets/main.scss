@@ -49,6 +49,14 @@ button {
   outline: none;
 }
 
+.moon {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  box-shadow: inset 8px 0px #777, inset 8px 0px 1px 2px #777;
+  -moz-box-shadow: inset 16px 0px #777, inset 16px 0px 1px 2px #777;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     content: "dark";
